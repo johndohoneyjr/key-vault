@@ -99,25 +99,6 @@ export PASSWORD=$(cat gh-secret.json | jq -r .clientSecret)
 export TENANT_ID=$(cat gh-secret.json | jq -r .tenantId)
 export SUB_ID=$(cat gh-secret.json | jq -r .subscriptionId)
 
-# Set azure policy to allow for key vault and access policy creation in this resource group
-# echo "Setting Azure Policy to allow for Key Vault and Access Policy creation in this resource group..."
-# az policy assignment create --name 'Deploy Key Vault' --scope /subscriptions/$SUB_ID/resourceGroups/$RESOURCE_GROUP --policy /providers/Microsoft.Authorization/policyDefinitions/4fae8e6a-5c83-4f35-9f8d-9c3838c5ed97 --params "{\"allowedLocations\":{\"value\":[\"$LOCATION\"]}}"
-
-# Create 6 character GUID - no dashes and append it to the vault name
-export GU=$(uuidgen)
-export GUI=$(echo $GU | tr -d "-")
-export GUID=${GUI:0:6}
-export AKV=$CUSTOMER_NAME$GUID
-
-
-echo "Creating Azure Key Vault..."
-az keyvault create --name $AKV --resource-group $RESOURCE_GROUP --location $LOCATION
-# Create a certificate in the keyvault
-# Create a certificate in the keyvault
-echo "Creating a certificate in the keyvault..."
-az keyvault certificate create --vault-name $AKV --name myCert --policy "$(az keyvault certificate get-default-policy)"
-
-
 sleep 5
 
 az role assignment create --role "Key Vault Secrets Officer"  \
@@ -127,6 +108,17 @@ az role assignment create --role "Key Vault Secrets Officer"  \
 az role assignment create --role "Key Vault Secrets Officer"  \
 --assignee $clientID \
 --scope /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP
+
+sleep 10
+
+echo "Creating Azure Key Vault..."
+az keyvault create --name $AKV --resource-group $RESOURCE_GROUP --location $LOCATION
+# Create a certificate in the keyvault
+# Create a certificate in the keyvault
+echo "Creating a certificate in the keyvault..."
+az keyvault certificate create --vault-name $AKV --name myCert --policy "$(az keyvault certificate get-default-policy)"
+
+
 
 
 echo "az login --service-principal --username $clientID --password $PASSWORD --tenant $TENANT_ID" > $CUSTOMER-login.txt
