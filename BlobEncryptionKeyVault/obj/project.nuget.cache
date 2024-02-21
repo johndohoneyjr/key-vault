@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "pKWehbm98nXQuwidVlg23eOIOJO+AozJ1v/90FH+wNJI2Rb3LFB7Re9JnM9NlGLhJ3mWf7xniqhCP4qMj3sF3g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\johndohoney\\Documents\\OptimalBlue\\azure-key-vault\\BlobEncryptionKeyVault\\BlobEncryptionKeyVault.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.identity\\1.10.2\\azure.identity.1.10.2.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.security.keyvault.certificates\\4.5.1\\azure.security.keyvault.certificates.4.5.1.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.security.keyvault.keys\\4.5.0\\azure.security.keyvault.keys.4.5.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.storage.blobs\\12.18.0\\azure.storage.blobs.12.18.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\azure.storage.common\\12.17.0\\azure.storage.common.12.17.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\microsoft.identity.client\\4.54.1\\microsoft.identity.client.4.54.1.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.31.0\\microsoft.identity.client.extensions.msal.2.31.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.22.0\\microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.io.hashing\\6.0.0\\system.io.hashing.6.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\johndohoney\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
