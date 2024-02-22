@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlobEncryptionKeyVault")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba422dba6df4e173c8c4bb941fed83f7e6f346a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b22f18e9f913b9407c22d1d00cd3a69a12b6d2da")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlobEncryptionKeyVault")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlobEncryptionKeyVault")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

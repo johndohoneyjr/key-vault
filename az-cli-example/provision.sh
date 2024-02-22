@@ -2,7 +2,7 @@
 
 # Environment Variables
 export SUBSCRIPTION_ID=""
-export RESOURCE_GROUP="optimal-blue-rg"
+export RESOURCE_GROUP="dohoney-test-rg"
 export LOCATION="eastus"
 export SERVICE_PRINCIPAL_NAME="serviceprincipal"
 export GITHUB_REPO="https://github.com/johndohoneyjr/key-vault"
@@ -10,6 +10,7 @@ export GITHUB_REPO="https://github.com/johndohoneyjr/key-vault"
 # for alias in WSL - alias expansion needed in scripts, not interactive
 shopt -s expand_aliases
 
+set -x
 
 # Enter the Customer Name and store in a variable
 echo "Enter the Customer Name: "
@@ -99,13 +100,26 @@ export PASSWORD=$(cat gh-secret.json | jq -r .clientSecret)
 export TENANT_ID=$(cat gh-secret.json | jq -r .tenantId)
 export SUB_ID=$(cat gh-secret.json | jq -r .subscriptionId)
 
+export GU=$(uuidgen)
+export GUI=$(echo $GU | tr -d "-")
+export GUID=${GUI:0:6}
+export AKV=$CUSTOMER_NAME$GUID
+
+echo "Creating Azure Key Vault..."
+az keyvault create --name $AKV --resource-group $RESOURCE_GROUP --location $LOCATION
+# Create a certificate in the keyvault
+# Create a certificate in the keyvault
+echo "Creating a certificate in the keyvault..."
+az keyvault certificate create --vault-name $AKV --name myCert --policy "$(az keyvault certificate get-default-policy)"
+
+
 sleep 5
 
 az role assignment create --role "Key Vault Secrets Officer"  \
 --assignee $clientID \
 --scope /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.KeyVault/vaults/$AKV
 
-az role assignment create --role "Key Vault Secrets Officer"  \
+az role assignment create --role "Key Vault Certificates Officer"  \
 --assignee $clientID \
 --scope /subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP
 
